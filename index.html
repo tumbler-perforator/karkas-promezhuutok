@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каркасные домики | Быстро, мобильно, экологично</title>
+    <meta name="description" content="Строим каркасные переносные домики для дачи, глэмпинга и бизнеса. Рассчитайте стоимость онлайн!">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <input type="checkbox" id="theme-switch">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">🏠 КаркасДом</div>
+                <ul class="nav-menu">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#calculator">Калькулятор</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <div class="hero-content">
+                <h1>Каркасные домики за 7 дней</h1>
+                <p>Мобильные, экологичные, готовые к жизни в любом месте</p>
+                <div class="hero-buttons">
+                    <a href="#calculator" class="btn btn-primary">Рассчитать стоимость</a>
+                    <a href="#contacts" class="btn btn-secondary">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Почему выбирают нас?</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Сборка за 7 дней</h3>
+                    <p>От проекта до готового дома — максимум 2 недели</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Полная мобильность</h3>
+                    <p>Демонтаж и перенос в любое место за 1 день</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Экологичные материалы</h3>
+                    <p>100% натуральная древесина и безопасные покрытия</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Индивидуальный дизайн</h3>
+                    <p>Создаем дом вашей мечты под любые задачи</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Гарантия 5 лет</h3>
+                    <p>Полная гарантия на конструкцию и материалы</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>От 25 000 ₽/м²</h3>
+                    <p>Честная цена без скрытых платежей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="section">
+        <div class="container">
+            <h2>Наши домики</h2>
+            <div class="catalog-grid">
+                <div class="house-card">
+                    <div class="house-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=3df3402ee0bb9ff42f3415a26ad4ef6591ecbc3e-4576362-images-thumbs&n=13" alt="Домик 20м²" loading="lazy">
+                    </div>
+                    <div class="house-info">
+                        <h3>Малышок 20м²</h3>
+                        <div class="house-specs">
+                            <span>20 м²</span>
+                            <span>1 спальня</span>
+                        </div>
+                        <div class="house-price">от 650 000 ₽</div>
+                        <button class="btn btn-primary" onclick="openCalculator('20')">Рассчитать</button>
+                    </div>
+                </div>
+                <div class="house-card">
+                    <div class="house-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=30de3f0149ba2f7b0304f9ede83d7e41030924c8-12640276-images-thumbs&n=13" alt="Домик 35м²" loading="lazy">
+                    </div>
+                    <div class="house-info">
+                        <h3>Комфорт 35м²</h3>
+                        <div class="house-specs">
+                            <span>35 м²</span>
+                            <span>2 спальни</span>
+                        </div>
+                        <div class="house-price">от 1 050 000 ₽</div>
+                        <button class="btn btn-primary" onclick="openCalculator('35')">Рассчитать</button>
+                    </div>
+                </div>
+                <div class="house-card">
+                    <div class="house-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=8cfaf248e06a48aed5221134dcf000fb4cc92473-5452061-images-thumbs&n=13" alt="Домик 50м²" loading="lazy">
+                    </div>
+                    <div class="house-info">
+                        <h3>Семья 50м²</h3>
+                        <div class="house-specs">
+                            <span>50 м²</span>
+                            <span>3 спальни</span>
+                        </div>
+                        <div class="house-price">от 1 500 000 ₽</div>
+                        <button class="btn btn-primary" onclick="openCalculator('50')">Рассчитать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="section calculator-section">
+        <div class="container">
+            <h2>Калькулятор стоимости</h2>
+            <div class="calculator">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label>Площадь, м²</label>
+                        <input type="range" id="area" min="15" max="100" value="30">
+                        <span id="area-value">30 м²</span>
+                    </div>
+                    <div class="input-group">
+                        <label>Тип конструкции</label>
+                        <select id="type">
+                            <option value="base">Базовый (25к/м²)</option>
+                            <option value="warm">Утепленный (35к/м²)</option>
+                            <option value="premium">Премиум (50к/м²)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Количество комнат</label>
+                        <select id="rooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    <div class="options-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terrace" value="150000">
+                            <span>Терраса +150 000₽</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="windows" value="100000">
+                            <span>Панорамные окна +100 000₽</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="finish" value="200000">
+                            <span>Полная отделка +200 000₽</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="electric" value="50000">
+                            <span>Электрика +50 000₽</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="calc-result">
+                    <div class="price" id="total-price">975 000 ₽</div>
+                    <div class="price-breakdown">
+                        <div>База: <span id="base-price">875 000 ₽</span></div>
+                        <div>Доп. опции: <span id="options-price">0 ₽</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-large" onclick="showOrderForm()">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderForm()">&times;</span>
+            <h3>Оставить заявку</h3>
+            <form id="orderForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Комментарий (параметры расчета)" rows="4"></textarea>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Stages -->
+    <section id="stages" class="section">
+        <div class="container">
+            <h2>Как мы работаем</h2>
+            <div class="stages-grid">
+                <div class="stage">
+                    <div class="stage-number">1</div>
+                    <h3>Заявка</h3>
+                    <p>Заполняете форму или звоните</p>
+                </div>
+                <div class="stage">
+                    <div class="stage-number">2</div>
+                    <h3>Консультация</h3>
+                    <p>Бесплатный расчет и подбор</p>
+                </div>
+                <div class="stage">
+                    <div class="stage-number">3</div>
+                    <h3>Проект</h3>
+                    <p>3D-визуализация за 2 дня</p>
+                </div>
+                <div class="stage">
+                    <div class="stage-number">4</div>
+                    <h3>Производство</h3>
+                    <p>Заводское качество 5-7 дней</p>
+                </div>
+                <div class="stage">
+                    <div class="stage-number">5</div>
+                    <h3>Доставка</h3>
+                    <p>По России от 2 дней</p>
+                </div>
+                <div class="stage">
+                    <div class="stage-number">6</div>
+                    <h3>Сборка</h3>
+                    <p>Готово к проживанию за 1 день</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <a href="tel:+78001234567">+7 (800) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@karkasdom.ru">info@karkasdom.ru</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <button type="submit" class="btn btn-primary">Получить консультацию</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">🏠 КаркасДом</div>
+                    <p>Каркасные домики под ключ за 7 дней</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+7 (800) 123-45-67<br>info@karkasdom.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <a href="#about">О нас</a>
+                    <a href="#catalog">Каталог</a>
+                    <a href="#calculator">Калькулятор</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 КаркасДом. Все права защищены.</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
